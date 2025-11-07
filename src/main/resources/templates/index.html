@@ -1,0 +1,444 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vidhan Vispute - Full Stack Developer</title>
+    <link rel="stylesheet" data-th-href="@{/css/output.css}" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@1.7.0/dist/flowbite.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <div class="text-2xl font-bold gradient-text">VV</div>
+          <div class="hidden md:flex space-x-8">
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-purple-600 transition"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-gray-700 hover:text-purple-600 transition"
+              >About</a
+            >
+            <a
+              href="#projects"
+              class="text-gray-700 hover:text-purple-600 transition"
+              >Projects</a
+            >
+            <a
+              href="#skills"
+              class="text-gray-700 hover:text-purple-600 transition"
+              >Skills</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-700 hover:text-purple-600 transition"
+              >Contact</a
+            >
+            <a
+              href="/admin"
+              class="text-gray-700 hover:text-purple-600 transition"
+              >Admin</a
+            >
+          </div>
+          <button class="md:hidden text-gray-700">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="pt-32 pb-20 px-4 bg-gradient-to-br from-purple-50 to-blue-50"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="text-purple-600 font-semibold mb-4">👋 Hello, I'm</div>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">
+              <span class="gradient-text">Vidhan Vispute</span>
+            </h1>
+            <h2 class="text-3xl text-gray-700 mb-6">Full Stack Developer</h2>
+            <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+              Crafting robust web solutions with Java, Spring Boot, React.js,
+              and Cloud technologies. 2+ years of experience delivering scalable
+              microservice architectures.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#contact"
+                class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:shadow-xl transition"
+              >
+                Get In Touch
+              </a>
+              <a
+                href="#projects"
+                class="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition"
+              >
+                View Work
+              </a>
+            </div>
+            <div class="flex space-x-6 mt-8">
+              <a
+                href="https://github.com/vidhanvispute"
+                class="text-gray-600 hover:text-purple-600 transition"
+              >
+                <i class="fab fa-github text-3xl"></i>
+              </a>
+              <a
+                href="https://linkedin.com/in/vidhanvispute"
+                class="text-gray-600 hover:text-purple-600 transition"
+              >
+                <i class="fab fa-linkedin text-3xl"></i>
+              </a>
+              <a
+                href="mailto:vispute.vidhan.it@gmail.com"
+                class="text-gray-600 hover:text-purple-600 transition"
+              >
+                <i class="fas fa-envelope text-3xl"></i>
+              </a>
+            </div>
+          </div>
+          <div class="relative">
+            <div
+              class="w-full h-96 bg-gradient-to-br from-purple-400 to-blue-500 rounded-2xl shadow-2xl flex items-center justify-center"
+            >
+              <i class="fas fa-code text-white text-9xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-4">About Me</h2>
+        <div
+          class="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-12"
+        ></div>
+
+        <div class="grid md:grid-cols-2 gap-12">
+          <div>
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+              Full Stack Developer with 2+ years of experience delivering Java
+              (Spring Boot) and React.js web solutions with integrated DevOps &
+              Cloud environments.
+            </p>
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+              Experienced in building microservice architectures, securing APIs,
+              and automating deployments with Docker, Jenkins, and Terraform.
+              Demonstrated ability to boost performance (25–35%) and reduce
+              deployment cycles (50%).
+            </p>
+            <p class="text-gray-700 text-lg leading-relaxed">
+              Strong communicator with an Agile mindset, focused on quality,
+              scalability, and collaboration.
+            </p>
+          </div>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="bg-purple-100 p-3 rounded-lg">
+                <i class="fas fa-briefcase text-purple-600 text-2xl"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-xl mb-2">Experience</h3>
+                <p class="text-gray-600">2+ Years in Full Stack Development</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="bg-blue-100 p-3 rounded-lg">
+                <i class="fas fa-graduation-cap text-blue-600 text-2xl"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-xl mb-2">Education</h3>
+                <p class="text-gray-600">
+                  B.E. Mechanical Engineering (CGPA: 8.1)
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="bg-green-100 p-3 rounded-lg">
+                <i class="fas fa-map-marker-alt text-green-600 text-2xl"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-xl mb-2">Location</h3>
+                <p class="text-gray-600">Pune, Maharashtra, India</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 bg-gray-50">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-4">Featured Projects</h2>
+        <div
+          class="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-12"
+        ></div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            th:each="project : ${projects}"
+            class="bg-white rounded-xl shadow-lg overflow-hidden card-hover"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center"
+            >
+              <i class="fas fa-project-diagram text-white text-6xl"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3" th:text="${project.name}">
+                Project Name
+              </h3>
+              <p class="text-gray-600 mb-4" th:text="${project.description}">
+                Description
+              </p>
+
+              <div class="mb-4">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    th:each="tech : ${#strings.arraySplit(project.techStack, ',')}"
+                    class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm"
+                    th:text="${tech}"
+                    >Tech</span
+                  >
+                </div>
+              </div>
+
+              <div class="border-t pt-4">
+                <div
+                  class="text-sm text-gray-500 mb-3"
+                  th:text="${project.startDate} + ' - ' + ${project.endDate}"
+                >
+                  Timeline
+                </div>
+                <ul class="space-y-2 text-gray-700 mb-4">
+                  <li
+                    th:each="highlight : ${#strings.arraySplit(project.highlights, '|')}"
+                    class="flex items-start"
+                  >
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span th:text="${highlight}">Highlight</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="flex space-x-4">
+                <a
+                  th:if="${project.githubUrl}"
+                  th:href="${project.githubUrl}"
+                  class="text-purple-600 hover:text-purple-800 transition"
+                >
+                  <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a
+                  th:if="${project.liveUrl}"
+                  th:href="${project.liveUrl}"
+                  class="text-blue-600 hover:text-blue-800 transition"
+                >
+                  <i class="fas fa-external-link-alt text-2xl"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-white">
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-4">Technical Skills</h2>
+        <div
+          class="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-12"
+        ></div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-gradient-to-br from-purple-50 to-blue-50 p-6 rounded-xl"
+          >
+            <div class="text-purple-600 text-4xl mb-4">
+              <i class="fas fa-server"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Backend</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Java 8-11, Spring Boot</li>
+              <li>• Spring Security (JWT/OAuth)</li>
+              <li>• Hibernate/JPA</li>
+              <li>• REST APIs, Microservices</li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gradient-to-br from-blue-50 to-purple-50 p-6 rounded-xl"
+          >
+            <div class="text-blue-600 text-4xl mb-4">
+              <i class="fas fa-palette"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Frontend</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>• React.js 17/18, Redux</li>
+              <li>• JavaScript (ES6+)</li>
+              <li>• HTML5, CSS3, Tailwind</li>
+              <li>• Thymeleaf, Bootstrap</li>
+            </ul>
+          </div>
+
+          <div
+            class="bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-xl"
+          >
+            <div class="text-green-600 text-4xl mb-4">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">DevOps & Cloud</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Docker, Kubernetes (EKS)</li>
+              <li>• Terraform, Jenkins 2.x</li>
+              <li>• AWS (EC2, RDS, S3)</li>
+              <li>• MySQL, MongoDB</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-4">Get In Touch</h2>
+        <div
+          class="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-12"
+        ></div>
+
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <form th:action="@{/contact}" method="post">
+            <div class="grid md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label class="block text-gray-700 font-semibold mb-2"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600"
+                />
+              </div>
+              <div>
+                <label class="block text-gray-700 font-semibold mb-2"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600"
+                />
+              </div>
+            </div>
+            <div class="mb-6">
+              <label class="block text-gray-700 font-semibold mb-2"
+                >Subject</label
+              >
+              <input
+                type="text"
+                name="subject"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600"
+              />
+            </div>
+            <div class="mb-6">
+              <label class="block text-gray-700 font-semibold mb-2"
+                >Message</label
+              >
+              <textarea
+                name="message"
+                rows="5"
+                required
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-purple-600"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 rounded-lg font-semibold hover:shadow-xl transition"
+            >
+              Send Message
+            </button>
+          </form>
+
+          <div class="mt-8 pt-8 border-t grid md:grid-cols-3 gap-6 text-center">
+            <div>
+              <i class="fas fa-envelope text-purple-600 text-3xl mb-2"></i>
+              <p class="text-gray-700">vispute.vidhan.it@gmail.com</p>
+            </div>
+            <div>
+              <i class="fas fa-phone text-purple-600 text-3xl mb-2"></i>
+              <p class="text-gray-700">+91 7387354720</p>
+            </div>
+            <div>
+              <i
+                class="fas fa-map-marker-alt text-purple-600 text-3xl mb-2"
+              ></i>
+              <p class="text-gray-700">Pune, Maharashtra</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-4">
+      <div class="max-w-7xl mx-auto text-center">
+        <p class="text-gray-400">© 2025 Vidhan Vispute. All rights reserved.</p>
+        <p class="text-gray-500 mt-2">
+          Built with Spring Boot, Thymeleaf & Tailwind CSS
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
